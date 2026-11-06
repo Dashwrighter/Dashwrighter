@@ -6,6 +6,14 @@ Both dashes are 1280×480. A file saved here works on either unit.
 
 **Warning:** A bad layout can misbehave on a real dash. Keep backups. Test on the unit before you rely on it.
 
+## Download
+
+Windows x64. One file, no installer:
+
+[Dashwrighter.exe](https://github.com/Dashwrighter/Dashwrighter/releases/latest/download/Dashwrighter.exe)
+
+The same file is on the [releases page](https://github.com/Dashwrighter/Dashwrighter/releases).
+
 ## Build and run
 
 The solution is x64 only. Open `Dashwrighter.sln` in Visual Studio (toolset **v145** / VS 18) and build Debug or Release.
