@@ -468,7 +468,7 @@ void EditorWindow::ClearDirty() {
 
 void EditorWindow::UpdateWindowTitle() {
     if (!hWnd) return;
-    std::wstring title = L"Holley Pro Dash Layout Editor";
+    std::wstring title = L"Dashwrighter";
     if (!doc_.sourcePath.empty()) {
         title += L" - ";
         title += Utf8ToWide(FileBaseName(doc_.sourcePath));
