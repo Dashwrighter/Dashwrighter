@@ -4,6 +4,8 @@ Windows editor for Holley EFI Pro Dash layout INI files (12.3" and 6.86").
 
 Both dashes are 1280×480. A file saved here works on either unit.
 
+Dashwrighter is an independent project. It is not affiliated with, endorsed by, or connected to Holley or its subsidiaries. Holley names are used only to identify the dash files this program edits.
+
 **Warning:** A bad layout can misbehave on a real dash. Keep backups. Test on the unit before you rely on it.
 
 ## Download
