@@ -14,6 +14,8 @@ Windows x64. One file, no installer:
 
 The same file is on the [releases page](https://github.com/Dashwrighter/Dashwrighter/releases).
 
+Windows may say the download is unsafe because the file is unsigned. Choose **More info**, then **Run anyway**.
+
 ## Build and run
 
 The solution is x64 only. Open `Dashwrighter.sln` in Visual Studio (toolset **v145** / VS 18) and build Debug or Release.
