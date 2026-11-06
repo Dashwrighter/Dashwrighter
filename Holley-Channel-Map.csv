@@ -1,0 +1,906 @@
+channel,name
+-1,Empty
+0,Invalid Channel
+1,RTC
+2,RPM
+3,Inj PW
+4,Duty Cycle
+5,CL Comp
+6,Target AFR
+7,Air/Fuel Ratio
+8,AFR Left
+9,AFR Right
+10,AFR Average
+11,Air Temp Enr
+12,Coolant Enr
+13,Coolant AFR Offset
+14,Afterstart Enr
+15,Current Learn
+16,CL Status
+17,Learn Status
+18,Fuel Economy
+19,Fuel Flow
+20,MAP RoC
+21,TPS RoC
+22,Tuning Change
+23,Estimated VE
+24,Fuel Table 1 %
+25,Fuel Table 2 %
+26,Fuel Table 3 %
+27,Ignition Timing
+28,Knock Retard
+29,Main Rev Limit
+30,Rev Limit #1
+31,Launch Retard
+32,Knock Level
+34,IAC Position
+35,Target Idle Speed
+36,MAP
+37,TPS
+38,MAT
+39,CTS
+40,Baro
+41,Battery
+42,Oil Pressure
+43,Fuel Pressure
+44,Pedal Position
+45,Custom1
+46,Custom2
+47,Custom3
+48,Main Rev Limit
+49,Rev Limit #1
+50,Rev Limit #2
+51,AC Kick
+52,Timing Retard #1
+53,Timing Retard #2
+54,Timing Retard #3
+55,Fan #1
+56,Fan #2
+57,#2 Fuel Pump
+58,AC Shutdown
+59,TCC Lockup
+60,Sensor Warning
+61,Sensor Caution
+62,Base Fuel lb/hr
+63,Base Fuel VE
+64,Base Timing
+65,Base Target AFR
+66,Base Ign Dwell
+67,Vol Comp Ign Dwell
+68,Inj End Angle
+73,ECU Log Trigger
+74,Timing vs Air
+75,Timing vs Cool
+76,Status 1
+77,Status 2
+78,Status 3
+79,Status 4
+80,Status 5
+81,Status 6
+82,Status 7
+83,Status 8
+84,Injector #1 PPH
+85,Injector #2 PPH
+86,Injector #3 PPH
+87,Injector #4 PPH
+88,Injector #5 PPH
+89,Injector #6 PPH
+90,Injector #7 PPH
+91,Injector #8 PPH
+92,Injector #9 PPH
+93,Injector #10 PPH
+94,Injector #11 PPH
+95,Injector #12 PPH
+96,Injector #13 PPH
+97,Injector #14 PPH
+98,Injector #15 PPH
+99,Injector #16 PPH
+100,Injector #17 PPH
+101,Injector #18 PPH
+102,Injector #19 PPH
+103,Injector #20 PPH
+104,Injector #21 PPH
+105,Injector #22 PPH
+106,Injector #23 PPH
+107,Injector #24 PPH
+108,Injector #25 PPH
+109,Injector #26 PPH
+110,Injector #27 PPH
+111,Injector #28 PPH
+112,Injector #1 PW
+113,Injector #2 PW
+114,Injector #3 PW
+115,Injector #4 PW
+116,Injector #5 PW
+117,Injector #6 PW
+118,Injector #7 PW
+119,Injector #8 PW
+120,Injector #9 PW
+121,Injector #10 PW
+122,Injector #11 PW
+123,Injector #12 PW
+124,Injector #13 PW
+125,Injector #14 PW
+126,Injector #15 PW
+127,Injector #16 PW
+128,Injector #17 PW
+129,Injector #18 PW
+130,Injector #19 PW
+131,Injector #20 PW
+132,Injector #21 PW
+133,Injector #22 PW
+134,Injector #23 PW
+135,Injector #24 PW
+136,Injector #25 PW
+137,Injector #26 PW
+138,Injector #27 PW
+139,Injector #28 PW
+140,Cyl #1 Fuel Cor
+141,Cyl #2 Fuel Cor
+142,Cyl #3 Fuel Cor
+143,Cyl #4 Fuel Cor
+144,Cyl #5 Fuel Cor
+145,Cyl #6 Fuel Cor
+146,Cyl #7 Fuel Cor
+147,Cyl #8 Fuel Cor
+148,Cyl #9 Fuel Cor
+149,Cyl #10 Fuel Cor
+150,Cyl #11 Fuel Cor
+151,Cyl #12 Fuel Cor
+152,Cyl #13 Fuel Cor
+153,Cyl #14 Fuel Cor
+154,Cyl #15 Fuel Cor
+155,Cyl #16 Fuel Cor
+156,Cyl #1 Timing Cor
+157,Cyl #2 Timing Cor
+158,Cyl #3 Timing Cor
+159,Cyl #4 Timing Cor
+160,Cyl #5 Timing Cor
+161,Cyl #6 Timing Cor
+162,Cyl #7 Timing Cor
+163,Cyl #8 Timing Cor
+164,Cyl #9 Timing Cor
+165,Cyl #10 Timing Cor
+166,Cyl #11 Timing Cor
+167,Cyl #12 Timing Cor
+168,Cyl #13 Timing Cor
+169,Cyl #14 Timing Cor
+170,Cyl #15 Timing Cor
+171,Cyl #16 Timing Cor
+172,DI Target FP
+173,Boost PSIG
+174,Staging Input 1
+175,Staging Input 2
+176,Staging Output
+177,Boost Gear
+178,Boost Stage
+179,Boost
+180,Boost Speed
+181,Boost Time
+182,Target Boost
+183,Trans Brake
+184,Boost Scramble +
+185,Boost Scramble -
+186,Manual Boost Build
+187,Manual Boost Reset
+188,Boost Build
+189,Boost Solenoid Duty
+190,Boost Safety
+191,Boost Master Enbl
+192,Boost Man Shift Inp
+193,Boost Man Stage Inp
+194,Boost Fill Sol DC
+195,Boost Vent Sol DC
+196,W/M Injection
+197,W/M Manual Enable
+198,W/M Low Fluid
+199,W/M Pump
+200,W/M Sol 1 Flow
+201,W/M Sol 2 Flow
+202,W/M Flow Total
+203,W/M Sol 1 DC
+204,W/M Sol 2 DC
+207,N2O Stage 1
+208,N2O Stage 2
+209,N2O Stage 3
+210,N2O Stage 4
+211,N2O Stage 5
+212,N2O Stage 6
+213,N2O Stage 7
+214,N2O Stage 8
+215,GPO 1
+216,GPO 2
+217,GPO 3
+218,GPO 4
+219,GPO 5
+220,GPO 6
+221,GPO 7
+222,GPO 8
+223,N2O Enabled
+224,N2O Input #1
+225,N2O Input #2
+226,N2O Input #3
+227,N2O Input #4
+228,N2O Input #5
+229,N2O Input #6
+230,N2O Input #7
+231,N2O Input #8
+232,N2O Purge
+233,N2O Lean Cutoff
+234,N2O Rich Cutoff
+235,N2O RPM Cutoff
+236,N2O MAP Cutoff
+237,N2O Purge Output
+238,N2O Dry Fuel #1
+239,N2O Dry Fuel #2
+240,N2O Dry Fuel #3
+241,N2O Dry Fuel #4
+242,N2O Dry Fuel #5
+243,N2O Dry Fuel #6
+244,N2O Dry Fuel #7
+245,N2O Dry Fuel #8
+246,N2O Tmg Mod #1
+247,N2O Tmg Mod #2
+248,N2O Tmg Mod #3
+249,N2O Tmg Mod #4
+250,N2O Tmg Mod #5
+251,N2O Tmg Mod #6
+252,N2O Tmg Mod #7
+253,N2O Tmg Mod #8
+254,N2O Timer #1
+255,N2O Timer #2
+256,N2O Timer #3
+257,N2O Timer #4
+258,N2O Timer #5
+259,N2O Timer #6
+260,N2O Timer #7
+261,N2O Timer #8
+263,Governor Actual
+264,Governor Target
+265,Line Pressure PSI
+266,Gear
+267,Speed
+268,Line Pressure
+269,Input Shaft Speed
+270,Accum Pressure
+271,TCC Duty Cycle
+272,Line Temp
+273,Torque Time
+274,Trans Man US Input
+275,Trans Man DS Input
+276,Trans Auto/Man In
+277,Trans Switch Position
+279,TB TPS #1
+280,TB TPS #2
+281,Pedal TPS #1
+282,Pedal TPS #2
+283,TB2 TPS #1
+284,TB2 TPS #2
+285,TB Position
+286,TB2 Position
+287,Brake Pedal
+289,TC Smartdrop
+290,TC Timing Retard
+291,TC N2O Decrease
+292,TC Boost Decrease
+293,TC DBW Decrease
+294,DS Timing Offset
+295,CS Timing Offset
+296,DS Rev Limit
+297,CS Rev Limit
+298,TC Time
+299,TC Launch Input
+300,Diag #1
+301,Diag #2
+302,Diag #3
+303,Diag #4
+304,Diag #5
+305,Diag #6
+306,Diag #7
+307,Diag #8
+308,Diag #9
+309,Diag #10
+310,Diag #11
+311,Diag #12
+312,Diag #13
+313,Diag #14
+314,Diag #15
+315,Diag #16
+316,Diag #17
+317,Diag #18
+318,Diag #19
+319,Diag #20
+320,AT Launch Input
+321,AT Shift Input
+322,AT Manual Reset
+323,AT Gear
+324,AT 1D #1
+325,AT 1D #2
+326,AT 1D #3
+327,AT 1D #4
+328,AT 1D #5
+329,AT 1D #6
+330,AT 1D #7
+331,AT 1D #8
+332,AT 2D #1
+333,AT 2D #2
+334,AT 2D #3
+335,AT 2D #4
+336,AT 2D #5
+337,AT 2D #6
+338,AT 2D #7
+339,AT 2D #8
+340,AT 1D Gear #1
+341,AT 1D Gear #2
+342,AT 1D Gear #3
+343,AT 1D Gear #4
+344,AT 1D Gear #5
+345,AT 1D Gear #6
+346,AT 1D Gear #7
+347,AT 1D Gear #8
+348,AT 2D Gear #1
+349,AT 2D Gear #2
+350,AT 2D Gear #3
+351,AT 2D Gear #4
+352,AT 2D Gear #5
+353,AT 2D Gear #6
+354,AT 2D Gear #7
+355,AT 2D Gear #8
+359,Bottle Pressure
+360,Nos Mini Fault
+361,Stage #1 Active
+362,Stage #2 Active
+363,Stage #1 TPS Voltage
+364,Stage #2 TPS Voltage
+365,Stage #1 Paused
+366,Stage #2 Paused
+367,Stage #1 RPM Status
+368,Stage #2 RPM Status
+369,Stage #1 Trigger Status
+370,Stage #2 Trigger Status
+371,Stage #1 Ramping
+372,Stage #2 Ramping
+373,Stage #1 Timed Out
+374,Stage #2 Timed Out
+375,Stage #1 Output Fault
+376,Stage #2 Output Fault
+377,Input 1
+378,Input 2
+379,Input 3
+380,Input 4
+381,Input 5
+382,Input 6
+383,Input 7
+384,Input 8
+385,Input 9
+386,Input 10
+387,Input 11
+388,Input 12
+389,Input 13
+390,Input 14
+391,Input 15
+392,Input 16
+393,Input 17
+394,Input 18
+395,Input 19
+396,Input 20
+397,Input 21
+398,Input 22
+399,Input 23
+400,Input 24
+401,Input 25
+402,Input 26
+403,Input 27
+404,Input 28
+405,Input 29
+406,Input 30
+407,Input 31
+408,Input 32
+409,Input 33
+410,Input 34
+411,Input 35
+412,Input 36
+413,Input 37
+414,Input 38
+415,Input 39
+416,Input 40
+417,Input 41
+418,Input 42
+419,Input 43
+420,Input 44
+421,Input 45
+422,Input 46
+423,Input 47
+424,Input 48
+425,Input 49
+426,Input 50
+427,Input 51
+428,Input 52
+429,Input 53
+430,Input 54
+431,Input 55
+432,Input 56
+433,Input 57
+434,Input 58
+435,Input 59
+436,Input 60
+437,Input 61
+438,Input 62
+439,Input 63
+440,Input 64
+441,Input 65
+442,Input 66
+443,Input 67
+444,Input 68
+445,Input 69
+446,Input 70
+447,Input 71
+448,Input 72
+449,Input 73
+450,Input 74
+451,Input 75
+452,Input 76
+453,Input 77
+454,Input 78
+455,Input 79
+456,Input 80
+457,Input 81
+458,Input 82
+459,Input 83
+460,Input 84
+461,Input 85
+462,Input 86
+463,Input 87
+464,Input 88
+465,Input 89
+466,Input 90
+467,Input 91
+468,Input 92
+469,Input 93
+470,Input 94
+471,Input 95
+472,Input 96
+473,Input 97
+474,Input 98
+475,Input 99
+476,Input 100
+477,Input 101
+478,Input 102
+479,Input 103
+480,Input 104
+481,Input 105
+482,Input 106
+483,Input 107
+484,Input 108
+485,Input 109
+486,Input 110
+487,Input 111
+488,Input 112
+489,Input 113
+490,Input 114
+491,Input 115
+492,Input 116
+493,Input 117
+494,Input 118
+495,Input 119
+496,Input 120
+497,Input 121
+498,Input 122
+499,Input 123
+500,Input 124
+501,Input 125
+502,Input 126
+503,Input 127
+504,Input 128
+505,Input 129
+506,Input 130
+507,Input 131
+508,Input 132
+509,Input 133
+510,Input 134
+511,Input 135
+512,Input 136
+513,Input 137
+514,Input 138
+515,Input 139
+516,Input 140
+517,Input 141
+518,Input 142
+519,Input 143
+520,Input 144
+521,Input 145
+522,Input 146
+523,Input 147
+524,Input 148
+525,Input 149
+526,Input 150
+527,Input 151
+528,Input 152
+529,Input 153
+530,Input 154
+531,Input 155
+532,Input 156
+533,Input 157
+534,Input 158
+535,Input 159
+536,Input 160
+537,Input 161
+538,Input 162
+539,Input 163
+540,Input 164
+541,Input 165
+542,Input 166
+543,Input 167
+544,Input 168
+545,Input 169
+546,Input 170
+547,Input 171
+548,Input 172
+549,Input 173
+550,Input 174
+551,Input 175
+552,Input 176
+553,Input 177
+554,Input 178
+555,Input 179
+556,Input 180
+557,Input 181
+558,Input 182
+559,Input 183
+560,Input 184
+561,Input 185
+562,Input 186
+563,Input 187
+564,Input 188
+565,Input 189
+566,Input 190
+567,Input 191
+568,Input 192
+569,Input 193
+570,Input 194
+571,Input 195
+572,Input 196
+573,Input 197
+574,Input 198
+575,Input 199
+576,Input 200
+577,Output 1
+578,Output 2
+579,Output 3
+580,Output 4
+581,Output 5
+582,Output 6
+583,Output 7
+584,Output 8
+585,Output 9
+586,Output 10
+587,Output 11
+588,Output 12
+589,Output 13
+590,Output 14
+591,Output 15
+592,Output 16
+593,Output 17
+594,Output 18
+595,Output 19
+596,Output 20
+597,Output 21
+598,Output 22
+599,Output 23
+600,Output 24
+601,Output 25
+602,Output 26
+603,Output 27
+604,Output 28
+605,Output 29
+606,Output 30
+607,Output 31
+608,Output 32
+609,Output 33
+610,Output 34
+611,Output 35
+612,Output 36
+613,Output 37
+614,Output 38
+615,Output 39
+616,Output 40
+617,Output 41
+618,Output 42
+619,Output 43
+620,Output 44
+621,Output 45
+622,Output 46
+623,Output 47
+624,Output 48
+625,Output 49
+626,Output 50
+627,Output 51
+628,Output 52
+629,Output 53
+630,Output 54
+631,Output 55
+632,Output 56
+633,Output 57
+634,Output 58
+635,Output 59
+636,Output 60
+637,Output 61
+638,Output 62
+639,Output 63
+640,Output 64
+641,Output 65
+642,Output 66
+643,Output 67
+644,Output 68
+645,Output 69
+646,Output 70
+647,Output 71
+648,Output 72
+649,Output 73
+650,Output 74
+651,Output 75
+652,Output 76
+653,Output 77
+654,Output 78
+655,Output 79
+656,Output 80
+657,Output 81
+658,Output 82
+659,Output 83
+660,Output 84
+661,Output 85
+662,Output 86
+663,Output 87
+664,Output 88
+665,Output 89
+666,Output 90
+667,Output 91
+668,Output 92
+669,Output 93
+670,Output 94
+671,Output 95
+672,Output 96
+673,Output 97
+674,Output 98
+675,Output 99
+676,Output 100
+677,Output 101
+678,Output 102
+679,Output 103
+680,Output 104
+681,Output 105
+682,Output 106
+683,Output 107
+684,Output 108
+685,Output 109
+686,Output 110
+687,Output 111
+688,Output 112
+689,Output 113
+690,Output 114
+691,Output 115
+692,Output 116
+693,Output 117
+694,Output 118
+695,Output 119
+696,Output 120
+697,Output 121
+698,Output 122
+699,Output 123
+700,Output 124
+701,Output 125
+702,Output 126
+703,Output 127
+704,Output 128
+705,Output 129
+706,Output 130
+707,Output 131
+708,Output 132
+709,Output 133
+710,Output 134
+711,Output 135
+712,Output 136
+713,Output 137
+714,Output 138
+715,Output 139
+716,Output 140
+717,Output 141
+718,Output 142
+719,Output 143
+720,Output 144
+721,Output 145
+722,Output 146
+723,Output 147
+724,Output 148
+725,Output 149
+726,Output 150
+727,Output 151
+728,Output 152
+729,Output 153
+730,Output 154
+731,Output 155
+732,Output 156
+733,Output 157
+734,Output 158
+735,Output 159
+736,Output 160
+737,Output 161
+738,Output 162
+739,Output 163
+740,Output 164
+741,Output 165
+742,Output 166
+743,Output 167
+744,Output 168
+745,Output 169
+746,Output 170
+747,Output 171
+748,Output 172
+749,Output 173
+750,Output 174
+751,Output 175
+752,Output 176
+753,Output 177
+754,Output 178
+755,Output 179
+756,Output 180
+757,Output 181
+758,Output 182
+759,Output 183
+760,Output 184
+761,Output 185
+762,Output 186
+763,Output 187
+764,Output 188
+765,Output 189
+766,Output 190
+767,Output 191
+768,Output 192
+769,Output 193
+770,Output 194
+771,Output 195
+772,Output 196
+773,Output 197
+774,Output 198
+775,Output 199
+776,Output 200
+777,Acc X
+778,Acc Y
+779,Acc Z
+780,Gyro X
+781,Gyro Y
+782,Gyro Z
+783,Mag X
+785,Mag Y
+786,Mag Z
+787,Ambient Light
+788,GPS Quality
+789,GPS Speed
+790,GPS Latitude
+791,GPS Longitude
+792,GPS Elevation
+793,GPS Direction
+794,Odometer
+795,Odometer Trip 1
+796,Odometer Trip 2
+797,Dash Channel 1
+798,Dash Channel 2
+799,Dash Channel 3
+800,Dash Channel 4
+801,Dash Channel 5
+802,Dash Channel 6
+803,Dash Channel 7
+804,Dash Channel 8
+805,Dash Channel 9
+806,Dash Channel 10
+807,Dash Channel 11
+808,Dash Channel 12
+809,Dash Channel 13
+810,Dash Channel 14
+811,Dash Channel 15
+812,Dash Channel 16
+813,Dash Switch 1
+814,Dash Switch 2
+815,Dash Switch 3
+816,Dash Switch 4
+817,Dash SSR 1
+818,Dash SSR 2
+819,Dash SSR 3
+820,Dash SSR 4
+821,Dash Speed 1
+822,Dash Speed 2
+823,Dash Speed 3
+824,Dash Speed 4
+825,Dash CAN 1
+826,Dash CAN 2
+827,Dash CAN 3
+828,Dash CAN 4
+829,Dash CAN 5
+830,Dash CAN 6
+831,Dash CAN 7
+832,Dash CAN 8
+833,Dash CAN 9
+834,Dash CAN 10
+835,Injector Set 1 PPH
+836,Injector Set 2 PPH
+837,Injector Set 1 PW
+838,Injector Set 2 PW
+839,EGT-A
+840,EGT-B
+841,EGT-C
+842,EGT-D
+843,EGT-E
+844,EGT-F
+845,EGT-G
+846,EGT-H
+847,Race Trans Launch
+848,Spool Assist Out 2
+849,Shift Single Out
+850,Shift Output 1-2
+851,Shift Output 2-3
+852,Shift Output 3-4
+853,Shift Output 4-5
+854,Shift Output 5-6
+855,Shift Output 6-7
+856,Shift Output 7-8
+857,Shift Over-Ride
+858,Shift Mster Enable
+859,Shift Ignition Cut
+860,Shift Timing Mod
+861,Shift Timer
+862,Conv Lock #1
+863,Conv Lock #2
+864,Conv Lock #3
+865,Conv Lock #4
+866,Conv Lock Disable
+867,Spool Assist Out
+868,Trans Dump Valve 1
+869,Trans Dump Valve 2
+870,Trans Dump Valve 3
+871,Trans Dump Valve 4
+872,Trans Dump Disable
+873,GPS Satellites
+875,Driveshaft RPM
+876,Gram/Per Cylinder
+877,Desired Cam Pos
+878,Actual Cam Pos
+879,VVT Solenoid DC
+880,Desired Cam Pos
+881,Actual Cam Pos
+882,VVT Solenoid DC
+886,Alt Target Volt
+887,Target Dome Offset
+889,Reverse Lockout
+890,WS Rev Limit
+891,WS Ign Retard
+892,WS N2O Decrease
+893,WS PSI Decrease
+894,WS DBW Decrease
+895,WS Wheelslip
+896,TC Gear
+897,Target Lambda
+898,Lambda
+899,2nd Shift Mode
+900,Virtual Torque
+901,Trans Brake Pedal Status
+902,Actual Gear
+903,TCC Desired Slip
+904,TCC Actual Slip
+905,Torque Red Req
+906,Max Boost Allowed
+908,Trans Fan Status
+912,Profiler Timing Retard
+913,Fuel Pump Status
+914,Fuel Pressure Status
+915,Injector 1 Status
+916,Injector 2 Status
+917,Injector 3 Status
+918,Injector 4 Status
+919,Injector Thermal Warning #1
+920,Injector Thermal Warning #2
+921,Injector Thermal Warning #3
+922,Injector Thermal Warning #4
+923,Injector Thermal Warning #5
+924,Injector Thermal Warning #6
+925,Injector Thermal Warning #7
+926,Injector Thermal Warning #8

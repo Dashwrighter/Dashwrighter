@@ -1,0 +1,14 @@
+Notes about bargraph sizing:
+Report whether any of these rules conflict with our existing model of the bargraph.
+The height of the render area always includes appropriate space for the label and spine, even when they are not enabled.
+When label is disabled, it also disables the spine.
+The width of the spine plus hooks is 8px less than the INI width setting, with 4px of empty padding on either end.
+The hooks are always 2px wide.
+The spine is always 1px wide.
+The hooks always start at the spine and end 6px away from the bar.
+The length of the hooks is a function of the label fontsize, with the spine aligned to a point 2px above the vertical center of the font (not at the exact center).
+The bar is always 25px thick.
+Defining the height of the gauge render area is a matter of calculating the height of the label, adding a pad between the label and the bar, and adding 25px for the bar.
+If scale numbers are turned on, it does not affect the height of anything else.  They are simply added on below wherever the bar is.
+When in vertical orientation, all of the above rules apply, but X and Y are swapped (everything rotates 90 degrees counterclockwise).
+Exception: scale values stay upright (horizontal glyphs). They still track tick locations. Label, spine, bar, and value rotate. RW-6.86-TERMX-Layout03-live. Style 2 uses the same exception.

@@ -1,0 +1,26 @@
+// Dashwrighter.rc
+// Roboto 1.200310 (2013) is Apache 2.0. IDR_LICENSE_ROBOTO is LICENSE-Roboto.txt.
+// Also compiled in: channel list (channel,name), the two original bezels,
+// the symbol atlas, and the switch sheets. A loose file on disk overrides
+// the copy inside the EXE.
+#include "resource.h"
+
+IDR_ROBOTO_REGULAR_2013  RCDATA "..\\Roboto-Regular-2013.ttf"
+IDR_LICENSE_ROBOTO       RCDATA "..\\LICENSE-Roboto.txt"
+IDR_CHANNEL_PICKER_CSV   RCDATA "..\\Holley-Channel-Picker.csv"
+IDR_BEZEL_BLACK_LG       RCDATA "..\\WidgetGraphics\\blackbezel-blackface-lg.png"
+IDR_BEZEL_SILVER_LG      RCDATA "..\\WidgetGraphics\\silverbezel-blackface-lg.png"
+IDR_SYMBOL_ATLAS         RCDATA "..\\WidgetGraphics\\TX-all_symbols.png"
+IDR_SWITCH_ROCKER            RCDATA "..\\WidgetGraphics\\switches.png"
+IDR_SWITCH_SLIDER            RCDATA "..\\WidgetGraphics\\switches-slider.png"
+IDR_SWITCH_ROCKER2           RCDATA "..\\WidgetGraphics\\switch-3.png"
+IDR_SWITCH_BLACKTOGGLE_150   RCDATA "..\\WidgetGraphics\\switches-blacktoggle-150.png"
+IDR_SWITCH_BLACKTOGGLE_80    RCDATA "..\\WidgetGraphics\\switches-blacktoggle-80.png"
+IDR_SWITCH_SILVERTOGGLE_150  RCDATA "..\\WidgetGraphics\\switches-silvertoggle-150.png"
+IDR_SWITCH_SILVERTOGGLE_80   RCDATA "..\\WidgetGraphics\\switches-silvertoggle-80.png"
+IDR_SWITCH_MOM_RED_SM        RCDATA "..\\WidgetGraphics\\sw-mom-red-sm.png"
+IDR_SWITCH_MOM_RED           RCDATA "..\\WidgetGraphics\\sw-mom-red.png"
+IDR_SWITCH_MOM_RED_LG        RCDATA "..\\WidgetGraphics\\sw-mom-red-lg.png"
+IDR_SWITCH_MOM_DARK_SM       RCDATA "..\\WidgetGraphics\\sw-mom-dark-sm.png"
+IDR_SWITCH_MOM_DARK          RCDATA "..\\WidgetGraphics\\sw-mom-dark.png"
+IDR_SWITCH_MOM_DARK_LG       RCDATA "..\\WidgetGraphics\\sw-mom-dark-lg.png"

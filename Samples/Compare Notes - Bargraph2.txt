@@ -1,0 +1,20 @@
+H-style2-orient.png (dash): orientation=true rotates Style 2 90° CCW (high side to the top;
+INI size stays 280×120). Paint/hit AABB is H×H at pos= (~120×120), not W×H swapped.
+hor is ignored (pairs look identical). Customize has no Orientation row; the INI flag
+still works. User accepted; **LOCKED 2026-09-19** (orientation, dividers, value size/baseline). Inspector Vertical is editor-only.
+Unlit bar is solid. Dividers are 1px of bar background in the lit fill only
+(step/minor boundaries the fill has passed), not canvas gaps or black strokes.
+
+Vertical exception (same as type 1): scale values stay horizontal; they follow tick
+locations. Label/spine/bar/value rotate. RW-6.86-TERMX-Layout03-live (type 1 live;
+Style 2 matches).
+
+Notes on bargraph 2 (P11 layouts):
+- Sloped bargraphs are a bit different than the regular ones.  When label (and therefore spine) are turned off, the high side of the sloped bar reaches all the way to the top of the render area.
+- Editor leaves spine on when label is off.  The dash shuts off the spine whenever the label is off.
+- Bargraph2 does NOT use 'border' to turn the spine off when label is on.  That is Digital's behavior (crown gates the spine independently of the label).  Regular bargraph does not: spine follows the label only, and Border does not hide it.  Style 2 matches type 1, not Digital.  Style 2 also has no Border row in Customize; crown in the INI is ignored.
+- The sloped top edge of bargraph2 starts too low on the editor.  On the dash, the start height is 50% of the end height.
+- When label is on, bargraph 2 seems to set the end height by excluding space for the label and spine, likely in the same way that the regular bargraph sets that padding.  Copy that calculation over and reuse it.
+- When label is off, bargraph2 still leaves 2px empty at the top of the render area.
+- Value: em 0.24×endH; cell-top at trapezoid centroid nudged em−cap+2 so the baseline matches honor (cap 14px). Clipped to the bar.
+

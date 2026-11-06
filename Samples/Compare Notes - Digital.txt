@@ -1,0 +1,6 @@
+Notes about digital sizing:
+The editor value font height is much improved, but oddly the '0' falls out of the bottom of the gauge, even though the '4' adheres to the 4px offset.  Could be a result of the font we have chosen?
+We still have the "bigger is too big, smaller is too small" issue, but it has improved.  Is it a kerning issue?  What might be our error here?
+For some reason the dash plots a wider gauge when labels are turned off.  The editor follows this trend (although to a slightly different result).  So editor is trying to be faithful, but why would Holley do that?  Regardless, we obviously need a different width calculation for label on/off (which we sort of do already because long labels can end up setting the width).
+Editor and dash width measurements available in MathCAD file.
+We seem to be getting the units font and extra width correct.

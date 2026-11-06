@@ -1,0 +1,11 @@
+INI file issues:
+Why write avFlag?  Holley already has 'av', and doesn't have avFlag.  That's a pure invention and should go away entirely.
+Why write '0' when 'false' will do?  Holley writes true/false.  Binary settings should be written into the INI file as true/false, not 1/0.
+General rule:  rpmModeEnabled is almost always going to be false.  Default to writing it that way unless the user changes it or it was set when the INI file was opened.
+For new gauges, always write the channel to point at Battery (I can't recall what channel number that is).  If you don't, the dash shows 'invalid channel' and really messes up the display.  When channel is already defined, preserve it.
+"Bronco II Test.ini" was developed from scratch in the editor, imported to the dash where channels were assigned, and then exported from the dash.  Review it and give me your comments.
+
+Other issues:
+The "Symbol" gauge should also support alphanumeric characters as well, not just the glyphs.  It does that right now, but they don't fit into the render box.  They appear to be oversized as compared to the glyphs.
+Crowded dashes don't let you pick gauges hidden behind other gauges.  Such a scenario is very likely (ex: digital or label behind a transparent analog background).  The UI needs a solution for this.  Propose one.
+

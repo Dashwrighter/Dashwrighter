@@ -1,0 +1,4 @@
+LED notes:
+With label off, dash pins the top of the LED to the top of the screen, strictly honoring the 0 Y position.  The editor does not.
+With label on, the dash shifts the LED downward to make room for the label.  The editor does not.
+The dash leaves 8px of padding between the label and the Y position, and no padding between the label and the LED.  Net effect is that the LED shifts downwards by 8px + label font height when label is turned on.

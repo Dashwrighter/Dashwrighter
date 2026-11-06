@@ -1,0 +1,42 @@
+# Build
+x64/
+**/x64/
+[Dd]ebug/
+[Rr]elease/
+*.obj
+*.pdb
+*.ilk
+*.iobj
+*.ipdb
+*.exe
+*.log
+*.tlog
+*.recipe
+*.idb
+*.enc
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.db-shm
+*.VC.db-wal
+
+# Local backup zip (milestone archive — not source of truth)
+Dashwrighter.zip
+
+# Hold-back material (firmware, art, customer files). Not for a public tree.
+private/
+
+# Local files that must not enter a public commit.
+# Roboto-Regular-2013.ttf stays. This name is the unused v2 font.
+*.aps
+*.lnk
+Roboto-Regular.ttf
+Samples/dash-renders/_cmp/
+WidgetGraphics-line/
+
+# OS
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,4 @@
+RPM bar notes:
+The dash renders the RPM bar 80px tall, but the dash renders it 100px tall.  This is likely because the editor pads both the top and bottom of the plate, but the dash doesn't use any padding at all.
+The editor accurately renders the bar 750px wide, just like the dash.  Notably, the editor does not pad the left and right ends of the bar.
+The editor renders the RPM bar in RW-misc-skull1-live in target RPM mode, but the dash does not do this (we don't have a dash render in hand, but trust me, I'm right about this).  We obviously still have some errant code switching the editor render into target RPM mode.  From previous testing, the rpm mode setting controls this.

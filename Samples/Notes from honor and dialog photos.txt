@@ -1,0 +1,8 @@
+On digital, border enables the spine.  But if label is off, spine is not drawn.
+On some gauges there are settings offered by the dash that do nothing.  Thin analog never has minor tics, scale values, or a border, even though settings are offered.  There are other odd results like that but I can't recall them at the moment.
+Bargraph2 will honor orientation, but the dash dialog does not offer that setting.  We should not offer it.
+Really large label fonts on bargraph appear to break the dash rendering (only a very thin bar is drawn).  Affects both orientations.
+I varied the supply voltage to the dash to get peak indicators to show up in H-peaks.  Only analog gauges honored them.
+RPM bar LED count is 100% controlled by Target RPM Enabled.  I tested it.  Enabling it makes the whole RPM bar grow wider from the middle and change color to match warnings/alarms.  Disabling it locks it to 15 LEDs.
+In H-scale-on, the scale values for gauge Bar got overwritten by the top of gauge S2, but it's OK.  The scale values were the same size on both, so S2 is the reference for scale value font size.  That font size is 11px tall and the top of the font is 11px below the bottom of the tick mark.  The tick mark is 4px tall and 2px wide.
+  

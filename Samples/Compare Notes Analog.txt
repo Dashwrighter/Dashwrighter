@@ -1,0 +1,46 @@
+General comment: The dash appears to be doing some sort of anti-aliasing.  This makes pixel-accurate measurements difficult.
+Eval of dash analog gauges:
+As I go through my findings, I will be making reference to inner and outer diameters (aka ID and OD).  This is measured in pixels, referenced from the center of the box defined by the INI file size and position.  Position is the upper left corner of that box if I remember correctly.
+The dash appears to be using fixed offsets to size the gauge elements.  Our previous work assumed scaling factors, but that was incorrect.  This will probably drive a complete rewrite of our element sizing rules.
+Original bezels are drawn with an OD that fits the render box perfectly.  I.e., if the size is 480, the OD of the original bezel is 480.
+In all cases, gauges are centered on the center of the box defined by INI size and position.
+In all cases, the outer tips of minor ticks should be at the same radius as the tips of major ticks.  The ID of the minor ticks is obviously larger than the major ticks (because minor ticks have to be shorter).
+There are very strong similarities regarding tick mark and arc bar rendering between gauges with no bezel and gauges with original bezel.  The model that renders them should be identical for those two cases.  Blitted bezels, however, will have different rules.
+For original bezels, OD is always exactly what size defines.  ID is always 18 pixels less than OD.  It is not a scaling factor, the original bezel is fixed at 9 pixels thick.
+The OD of a gauge with no bezel is always 18 pixels less than the size (equal to the ID of an original bezel).
+For gauges with original bezels and no bezel, the outer end of all tick marks aligns to a circle with a diameter equal to the size minus 28 pixels.
+The length of the major tick marks is not straightforward.  For original and no-border gauges with size 255-480, the length of the major ticks is 34 pixels.  For gauges with size 180, the length drops to 29.  For gauges with size 127, the length drops to 25.  The relationship between length of tick marks is non-linear with gauge size, and seems to reach a maximum of 34 pixels somewhere between size 180 and 255.
+The arc bars on gauges with original bezels and no bezel have an OD 2 pixels larger than the outer ends of the major tick marks.  The thickness of the arc bars is the same as the length of the major ticks.  In other words, the arc bar thickness equals the length of the major tick, but it's shifted outwards radially by 1 pixel.
+Blitted bezels get a different set of sizing rules.
+Blit bezel OD is always 97% of the INI file size, leaving a transparent gap around the bezel (i.e., it doesn't fill the render box all the way like original bezels do).  But the gauge is still centered in the box.
+Blit bezel ID is scaled from the OD or size, but not linearly.  For size 480, ID is 420.  For 255, 213.  For 180, 148.  For 127, 98.  The scale factor reduces as gauge size reduces.  In our case, we work from the widget, so we don't actively try to control the ID, we just scale the widget to match the desired OD.  So we might just ignore this issue in favor of simplicity.
+The widget that the dash is blitting is much more smoothly shaded than the image from the widget folder.  I propose to copy the bezel from the dash and create our own, higher quality widget.
+Blit bezels appear to partially overwrite ticks and arc bars.  This also implies that blit is applied last.
+Because of the overwrite, for blit bezels we will assume that the tips of the tick marks and the OD of the arc bars exactly equals the bezel ID.  Also because of the overwrite, we will draw both of those elements 1 pixel oversize and count on the overwrite to cut the extra off just right.
+The non-linearity is present in the length of the major tick marks on blit bezel gauges.  For sizes 255 and 480, the major ticks are 20 pixels long. For size 180, 16.  For size 127, 11.
+For blit bezel gauges, the arc bar thickness is always 50% of the major tick length.
+H-analog-ct-crown (dash 2026-09-12):
+ct selects analog face/tick/arc geometry even when Border is off (crown=false).
+off0 (ct=0, no border) = original-style large pie, thick ticks, thick warning arcs.
+off1 (ct=1, no border) = blit-inner diameter, thin ticks, thin warning arcs, no bezel drawn.
+on1 (ct=1, border on) = same inner geometry as off1 plus the blit bezel.
+Editor 2026-09-12: AnalogIsBlit is ct 1/2/3 (crown only draws the sprite). Blit ID table 420/213/148/98; annulus stretch; OD unchanged. off1 is the small blit-inner pie. Residual: original major length still 20 (Compare Notes 34); blit ID may still run slightly large vs the honor photo.
+
+Universal rules:
+The length of minor tick marks always seems to be about 60% of the length of major tick marks, regardless of border.
+For all border types, the width of major tick marks appears to be non-linear as well.  Gauges with size 255-480 have major ticks that are 6 pixels wide.  It drops to 4 for gauges at 180, and 3 for gauges at 127.
+For all border types, the width of minor ticks never exceeds 2 pixels (could be 1, but antialising makes it hard to tell).
+
+H-analog-ct-crown reshoot (user 2026-09-12, confirmed):
+Major tick *width* follows ct, not one pen for all borders:
+  ct=0 (off0 / on0): majors are thin, same weight as minors.
+  ct>=1 (off1 / on1): majors are much thicker.
+Editor 2026-09-12 (item 36): ct=0 major pen = 2px (same as minors); ct>=1 fat (8 at S≥255).
+Needle lengthened to tick rim. Blit ID hairline: skip PNG inner lip + face-color cover stroke.
+
+Editor 2026-09-19 (item 40): fat pen 6/4/3 (255/180/127). Needle tip tickOuter-13 original / -11 blit (dash meets inner majors, not outer rim). Label/value center-anchored (0.30×R above, 0.23×R+2 below). User accepted; **LOCKED 2026-09-19**.
+
+
+
+
+
