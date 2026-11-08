@@ -3,6 +3,9 @@
 // Compiled into the EXE. A loose file still wins when the program finds one
 // (Roboto, Holley-Channel-Picker.csv, or WidgetGraphics).
 // Apache-2.0 Roboto 1.200310 (2013). The license text is IDR_LICENSE_ROBOTO.
+// IDI_APP is the window and file icon (Dashwrighter.ico). Lowest id so
+// Explorer uses it for the EXE.
+#define IDI_APP                            1
 #define IDR_ROBOTO_REGULAR_2013          260
 #define IDR_LICENSE_ROBOTO               261
 #define IDR_CHANNEL_PICKER_CSV           262
@@ -22,3 +25,18 @@
 #define IDR_SWITCH_MOM_DARK_SM           276
 #define IDR_SWITCH_MOM_DARK              277
 #define IDR_SWITCH_MOM_DARK_LG           278
+
+#ifndef RC_INVOKED
+#include <windows.h>
+
+// LR_SHARED icons belong to the process. Do not DestroyIcon them.
+inline void ApplyAppIcon(WNDCLASSEXW& wc) {
+    const HINSTANCE inst = wc.hInstance ? wc.hInstance : GetModuleHandleW(nullptr);
+    wc.hIcon = static_cast<HICON>(LoadImageW(
+        inst, MAKEINTRESOURCEW(IDI_APP), IMAGE_ICON,
+        GetSystemMetrics(SM_CXICON), GetSystemMetrics(SM_CYICON), LR_SHARED));
+    wc.hIconSm = static_cast<HICON>(LoadImageW(
+        inst, MAKEINTRESOURCEW(IDI_APP), IMAGE_ICON,
+        GetSystemMetrics(SM_CXSMICON), GetSystemMetrics(SM_CYSMICON), LR_SHARED));
+}
+#endif

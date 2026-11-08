@@ -5,6 +5,7 @@
 
 #include "EditorWindow.h"
 #include "EditorInternals.h"
+#include "resource.h"
 #include "SymbolPicker.h"
 #include "../Io/IniLayoutReader.h"
 #include "../Io/IniLayoutWriter.h"
@@ -309,13 +310,15 @@ bool EditorWindow::Create() {
     hUiFont_ = CreateFontW(-12, 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE,
         DEFAULT_CHARSET, 0, 0, CLEARTYPE_QUALITY, DEFAULT_PITCH | FF_SWISS, L"Segoe UI");
 
-    WNDCLASSW wc = {};
+    WNDCLASSEXW wc = {};
+    wc.cbSize = sizeof(wc);
     wc.lpfnWndProc = WindowProc;
     wc.hInstance = GetModuleHandle(nullptr);
     wc.lpszClassName = L"Dashwrighter";
     wc.hCursor = LoadCursor(nullptr, IDC_ARROW);
     wc.hbrBackground = hBrBg_;
-    RegisterClassW(&wc);
+    ApplyAppIcon(wc);
+    RegisterClassExW(&wc);
 
     const int clientW = Insp::kClientW;
     const int clientH = Insp::kClientH;

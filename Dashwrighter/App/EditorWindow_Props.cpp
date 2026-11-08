@@ -4,6 +4,7 @@
 
 #include "EditorWindow.h"
 #include "EditorInternals.h"
+#include "resource.h"
 #include "SymbolPicker.h"
 #include "ChannelPicker.h"
 #include "../Io/IniUtils.h"
@@ -266,13 +267,15 @@ void EditorWindow::CloseMoreSettings() {
 }
 
 void EditorWindow::CreateMoreSettingsHost() {
-    WNDCLASSW wc = {};
+    WNDCLASSEXW wc = {};
+    wc.cbSize = sizeof(wc);
     wc.lpfnWndProc = EditorWindow::MoreSettingsProc;
     wc.hInstance = GetModuleHandle(nullptr);
     wc.lpszClassName = L"HolleyMoreSettings";
     wc.hbrBackground = hBrBg_ ? hBrBg_ : (HBRUSH)(COLOR_BTNFACE + 1);
     wc.hCursor = LoadCursor(nullptr, IDC_ARROW);
-    RegisterClassW(&wc);
+    ApplyAppIcon(wc);
+    RegisterClassExW(&wc);
 
     hMoreWnd = CreateWindowExW(WS_EX_DLGMODALFRAME, L"HolleyMoreSettings", L"More settings",
         WS_CAPTION | WS_SYSMENU | WS_POPUP | WS_CLIPCHILDREN,
@@ -1208,7 +1211,8 @@ bool EditorWindow::PickColor(unsigned int& holleyColor) {
 
     static bool registered = false;
     if (!registered) {
-        WNDCLASSW wc = {};
+        WNDCLASSEXW wc = {};
+        wc.cbSize = sizeof(wc);
         wc.lpfnWndProc = [](HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) -> LRESULT {
             State* s = reinterpret_cast<State*>(GetWindowLongPtrW(hwnd, GWLP_USERDATA));
             if (msg == WM_NCCREATE) {
@@ -1379,7 +1383,8 @@ bool EditorWindow::PickColor(unsigned int& holleyColor) {
         wc.lpszClassName = L"HolleyColorPick";
         wc.hCursor = LoadCursor(nullptr, IDC_ARROW);
         wc.hbrBackground = hBrBg_ ? hBrBg_ : (HBRUSH)(COLOR_BTNFACE + 1);
-        RegisterClassW(&wc);
+        ApplyAppIcon(wc);
+        RegisterClassExW(&wc);
         registered = true;
     }
 

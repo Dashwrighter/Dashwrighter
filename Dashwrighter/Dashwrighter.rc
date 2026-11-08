@@ -5,6 +5,9 @@
 // the copy inside the EXE.
 #include "resource.h"
 
+// From "..\\Dashwrighter Icon.png" (square, black field).
+IDI_APP ICON "Dashwrighter.ico"
+
 IDR_ROBOTO_REGULAR_2013  RCDATA "..\\Roboto-Regular-2013.ttf"
 IDR_LICENSE_ROBOTO       RCDATA "..\\LICENSE-Roboto.txt"
 IDR_CHANNEL_PICKER_CSV   RCDATA "..\\Holley-Channel-Picker.csv"

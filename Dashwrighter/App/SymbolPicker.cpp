@@ -7,6 +7,7 @@
 // =============================================================================
 
 #include "SymbolPicker.h"
+#include "resource.h"
 #include "../Render/LayoutRenderer.h"
 #include "../Render/SymbolAtlasData.inc"
 #include <windows.h>
@@ -454,13 +455,15 @@ bool RunSymbolPicker(HWND owner, std::string& utf8Label) {
 
     static bool registered = false;
     if (!registered) {
-        WNDCLASSW wc = {};
+        WNDCLASSEXW wc = {};
+        wc.cbSize = sizeof(wc);
         wc.lpfnWndProc = PickerProc;
         wc.hInstance = GetModuleHandle(nullptr);
         wc.lpszClassName = L"HolleySymbolPicker";
         wc.hCursor = LoadCursor(nullptr, IDC_ARROW);
         wc.hbrBackground = reinterpret_cast<HBRUSH>(GetStockObject(BLACK_BRUSH));
-        RegisterClassW(&wc);
+        ApplyAppIcon(wc);
+        RegisterClassExW(&wc);
         registered = true;
     }
 

@@ -6,6 +6,7 @@
 // =============================================================================
 
 #include "ChannelPicker.h"
+#include "resource.h"
 #include "../Io/ChannelCatalog.h"
 #include <windows.h>
 #include <uxtheme.h>
@@ -275,13 +276,15 @@ bool RunChannelPicker(HWND owner, int& channelId) {
 
     static bool registered = false;
     if (!registered) {
-        WNDCLASSW wc = {};
+        WNDCLASSEXW wc = {};
+        wc.cbSize = sizeof(wc);
         wc.lpfnWndProc = PickerProc;
         wc.hInstance = GetModuleHandle(nullptr);
         wc.lpszClassName = L"HolleyChannelPicker";
         wc.hCursor = LoadCursor(nullptr, IDC_ARROW);
         wc.hbrBackground = reinterpret_cast<HBRUSH>(GetStockObject(BLACK_BRUSH));
-        RegisterClassW(&wc);
+        ApplyAppIcon(wc);
+        RegisterClassExW(&wc);
         registered = true;
     }
 
